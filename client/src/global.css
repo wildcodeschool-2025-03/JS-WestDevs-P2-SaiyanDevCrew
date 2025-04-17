@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Saiyan Sans";
+    src: 
+      local("Saiyan Sans"),
+      url("./assets/Saiyan-Sans.ttf") 
+      format("truetype");
+}
+@font-face {
+    font-family: "Inter";
+    src: 
+      local("Trickster"),
+      url("./assets/Inter_28pt-Bold.ttf") format("truetype");
+}
+
+:root {
+  --font-text: "Inter", sans-serif;
+  --font-component: "Saiyan Sans", cursive;
+}
