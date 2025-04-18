@@ -1,7 +1,12 @@
 import "./App.css";
+import CharacterCard from "./components/CharacterCard/CharacterCard";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <CharacterCard />
+    </>
+  );
 }
 
 export default App;
