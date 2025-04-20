@@ -1,0 +1,36 @@
+{
+  "Members": [
+    {
+      "id": 1,
+      "image": "/src/assets/images/VincentCrew.webp",
+      "firstname": "Vincent",
+      "lastname": "Luccioni",
+      "status": "Développeur",
+      "github": "https://github.com/Vinzifinz"
+    },
+    {
+      "id": 2,
+      "image":"/src/assets/images/MaxenceCrew.webp",
+      "firstname": "Maxence",
+      "lastname": "Beaupere",
+      "status": "Développeur",
+      "github": "https://github.com/B-Maxp"
+    },
+    {
+      "id": 3,
+      "image":"/src/assets/images/LudoDBZStyle.webp",
+      "firstname": "Ludovic",
+      "lastname": "Galicher",
+      "status": "Développeur",
+      "github": "https://github.com/G-Ludovic"
+    },
+    {
+      "id": 4,
+      "image":"/src/assets/images/MohamedCrew.webp",
+      "firstname": "Mohamed",
+      "lastname": "Aouis",
+      "status": "Développeur",
+      "github": "https://github.com/Mohamed-am10"
+    }
+  ]
+}
