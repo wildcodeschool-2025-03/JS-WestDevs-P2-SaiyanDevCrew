@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "image":"/src/assets/images/MaxenceCrew.webp",
+      "image": "/src/assets/images/MaxenceCrew.webp",
       "firstname": "Maxence",
       "lastname": "Beaupere",
       "status": "Développeur",
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "image":"/src/assets/images/LudoDBZStyle.webp",
+      "image": "/src/assets/images/LudoDBZStyle.webp",
       "firstname": "Ludovic",
       "lastname": "Galicher",
       "status": "Développeur",
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "image":"/src/assets/images/MohamedCrew.webp",
+      "image": "/src/assets/images/MohamedCrew.webp",
       "firstname": "Mohamed",
       "lastname": "Aouis",
       "status": "Développeur",

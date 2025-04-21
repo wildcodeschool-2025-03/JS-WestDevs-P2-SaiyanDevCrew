@@ -22,17 +22,19 @@ function CrewPage() {
 
   return (
     <>
-      <h2>Le Crew</h2>
-      {member.map((el) => (
-        <CardMember
-          key={el.id}
-          image={el.image}
-          firstname={el.firstname}
-          lastname={el.lastname}
-          status={el.status}
-          github={el.github}
-        />
-      ))}
+        <h2>Le Crew</h2>
+      <main>
+        {member.map((el) => (
+          <CardMember
+            key={el.id}
+            image={el.image}
+            firstname={el.firstname}
+            lastname={el.lastname}
+            status={el.status}
+            github={el.github}
+          />
+        ))}
+      </main>
     </>
   );
 }
