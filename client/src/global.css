@@ -16,6 +16,7 @@
   --primary-color: rgba(251, 178, 36, 1);
   --secondary-color: rgba(217, 217, 217, 1);
   --tertiary-color: rgba(220, 43, 21, 1);
+  --overlay-color: rgba(30, 30, 30, 1);
 }
 
 h2 {

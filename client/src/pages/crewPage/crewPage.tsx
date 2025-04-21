@@ -13,6 +13,7 @@ interface PropsMember {
 
 function CrewPage() {
   const [member, setMember] = useState<PropsMember[]>([]);
+  const [activeId, setActiveId] = useState<number | null>(null);
 
   useEffect(() => {
     fetch("./src/data/member.json")
@@ -22,7 +23,7 @@ function CrewPage() {
 
   return (
     <>
-        <h2>Le Crew</h2>
+      <h2>Le Crew</h2>
       <main>
         {member.map((el) => (
           <CardMember
@@ -32,6 +33,9 @@ function CrewPage() {
             lastname={el.lastname}
             status={el.status}
             github={el.github}
+            id={el.id}
+            activeId={activeId}
+            setActiveId={setActiveId}
           />
         ))}
       </main>
