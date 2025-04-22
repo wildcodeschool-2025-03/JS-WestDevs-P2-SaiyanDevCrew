@@ -16,6 +16,7 @@
   img {
     border-radius: 15px;
     height: 240px;
+    color: white;
   }
 
   article {
@@ -43,6 +44,8 @@
 
   .github {
     position: relative;
+    color: white;
+    text-decoration: none;
   }
 
   .github-logo {
