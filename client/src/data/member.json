@@ -2,7 +2,7 @@
   "Members": [
     {
       "id": 1,
-      "image": "/src/assets/images/VincentCrew.webp",
+      "image": "/images/VincentCrew.webp",
       "firstname": "Vincent",
       "lastname": "LucciOni",
       "status": "Developpeur",
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "image": "/src/assets/images/MaxenceCrew.webp",
+      "image": "/images/MaxenceCrew.webp",
       "firstname": "Maxence",
       "lastname": "Beaupere",
       "status": "Developpeur",
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "image": "/src/assets/images/LudoDBZStyle.webp",
+      "image": "/images/LudoDBZStyle.webp",
       "firstname": "LudOvic",
       "lastname": "Galicher",
       "status": "Developpeur",
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "image": "/src/assets/images/MohamedCrew.webp",
+      "image": "/images/MohamedCrew.webp",
       "firstname": "MOhamed",
       "lastname": "AOuis",
       "status": "Developpeur",

@@ -1,4 +1,3 @@
-// Component CardMember.tsx
 import "./CardMember.css";
 
 interface PropsMember {
@@ -29,15 +28,10 @@ function CardMember({
   };
 
   return (
-    <div
-      className={`cardMember ${isActive ? "active" : ""}`}
+    <button
+      type="button"
+      className={`card-Member ${isActive ? "active" : ""}`}
       onClick={toggleCard}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault(); // éviter le scroll avec Espace
-          toggleCard();
-        }
-      }}
     >
       <img src={image} alt={`${firstname} ${lastname}`} />
       {isActive && (
@@ -46,16 +40,26 @@ function CardMember({
             {firstname} <br /> {lastname}
           </h3>
           <p>{status}</p>
-          <a href={github} target="_blank" rel="noopener noreferrer">
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-link"
+          >
             <img
-              src="/src/assets/images/github-mark-white.svg"
+              src="/images/github-mark-white.svg"
               alt="Logo GitHub"
               className="github"
+            />
+            <img
+              src="/images/github-aura.webp"
+              alt="Aura GitHub"
+              className="github-aura"
             />
           </a>
         </article>
       )}
-    </div>
+    </button>
   );
 }
 

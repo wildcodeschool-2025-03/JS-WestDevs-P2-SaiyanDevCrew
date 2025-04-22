@@ -1,4 +1,4 @@
-main {
+.Crew {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,7 +6,7 @@ main {
 }
 
 @media screen and (min-width: 920px) {
-  main {
+  .Crew {
     flex-direction: row;
     justify-content: space-around;
     width: 90%;

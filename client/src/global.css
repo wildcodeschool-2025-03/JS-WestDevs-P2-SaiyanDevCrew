@@ -28,3 +28,10 @@ h2 {
   font-size: 5rem;
   letter-spacing: 0.3rem;
 }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}

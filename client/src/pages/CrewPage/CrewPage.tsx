@@ -24,7 +24,7 @@ function CrewPage() {
   return (
     <>
       <h2>Le Crew</h2>
-      <main>
+      <main className="Crew">
         {member.map((el) => (
           <CardMember
             key={el.id}

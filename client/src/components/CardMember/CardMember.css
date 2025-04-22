@@ -1,4 +1,4 @@
-.cardMember {
+.card-Member {
   box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
@@ -11,6 +11,7 @@
   cursor: pointer;
   border-radius: 15px;
   background-color: var(--overlay-color);
+  border: none;
 
   img {
     border-radius: 15px;
@@ -35,18 +36,33 @@
     font-size: 1.3rem;
     margin: 0;
   }
+  .github-link {
+    position: relative;
+  }
 
   .github {
     height: 30px;
     padding: 31px 20px 9px 20px;
+    transition: opacity 700ms ease-in;
+    opacity: 1;
   }
-  .github:hover {
+  .github:hover::after {
+    content: "";
     background-image: url("/src/assets/images/github-aura.webp");
-    background-size: contain;
-    background-repeat: no-repeat;
+    display: inline-block;
+    /* background-size: contain;
+    background-repeat: no-repeat; */
+    height: 100px;
+    width: 100px;
+  }
+  .github-aura {
+    position: absolute;
+    height: 100px;
+    left: 10px;
+    bottom: 10px;
   }
 }
 
-.cardMember.active {
+.card-Member.active {
   width: 300px;
 }
