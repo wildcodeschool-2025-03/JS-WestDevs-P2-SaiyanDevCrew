@@ -37,7 +37,7 @@ header {
   }
 }
 
-figure {
+.header figure {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -65,7 +65,7 @@ figure {
     justify-content: space-between;
   }
 
-  figure {
+  .header figure {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -75,7 +75,7 @@ figure {
 }
 
 @media (max-width: 768px) {
-  figure {
+  .header figure {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
