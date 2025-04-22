@@ -2,9 +2,11 @@ import "./App.css";
 import CrewPage from "./pages/crewPage/crewPage";
 
 function App() {
-  return <>
-  <CrewPage/>
-  </>;
+  return (
+    <>
+      <CrewPage />
+    </>
+  );
 }
 
 export default App;
