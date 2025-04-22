@@ -12,11 +12,7 @@ interface CardProps {
 function CharacterCard({ image, name, race, gender, description }: CardProps) {
   return (
     <article className="character-card">
-      <img src={image} alt="{name}" />
-      <h2>
-        {name} {race} {gender}
-      </h2>
-      <p>{description}</p>
+      <img src={image} alt={name} />
     </article>
   );
 }
