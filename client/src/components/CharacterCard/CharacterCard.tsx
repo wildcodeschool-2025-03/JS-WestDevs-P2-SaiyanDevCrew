@@ -1,13 +1,23 @@
 import "../CharacterCard/CharacterCard.css";
 
-function CharacterCard() {
+interface CardProps {
+  id: number;
+  image: string;
+  name: string;
+  race: string;
+  gender: string;
+  description: string;
+}
+
+function CharacterCard({ image, name, race, gender, description }: CardProps) {
   return (
-    <figure>
-      <img
-        src="https://dragonball-api.com/characters/goku_normal.webp"
-        alt=""
-      />
-    </figure>
+    <article className="character-card">
+      <img src={image} alt="{name}" />
+      <h2>
+        {name} {race} {gender}
+      </h2>
+      <p>{description}</p>
+    </article>
   );
 }
 
