@@ -1,4 +1,4 @@
-.card-Member {
+.card-member {
   box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
@@ -49,9 +49,6 @@
   .github:hover::after {
     content: "";
     background-image: url("/src/assets/images/github-aura.webp");
-    display: inline-block;
-    /* background-size: contain;
-    background-repeat: no-repeat; */
     height: 100px;
     width: 100px;
   }
@@ -63,6 +60,6 @@
   }
 }
 
-.card-Member.active {
+.card-member.active {
   width: 300px;
 }

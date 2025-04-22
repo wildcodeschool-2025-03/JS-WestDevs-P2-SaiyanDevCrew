@@ -30,7 +30,7 @@ function CardMember({
   return (
     <button
       type="button"
-      className={`card-Member ${isActive ? "active" : ""}`}
+      className={`card-member ${isActive ? "active" : ""}`}
       onClick={toggleCard}
     >
       <img src={image} alt={`${firstname} ${lastname}`} />
