@@ -24,19 +24,9 @@ function CharacterCard({
 }: CardProps) {
   return (
     <div className="character">
-      <article className="character-card">
+      <button type="reset" className="character-card">
         <img src={image} alt={name} />
-      </article>
-      <article className="character-data">
-        <h2>{name}</h2>
-        <p>
-          {race} {gender}
-        </p>
-        <p> Base Ki: {ki}</p>
-        <p>Max Ki: {maxKi}</p>
-        <p>{affiliation}</p>
-        <a href="/">Select</a>
-      </article>
+      </button>
     </div>
   );
 }
