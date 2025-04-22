@@ -44,12 +44,12 @@ function CardMember({
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="github-link"
+            className="github"
           >
             <img
-              src="/images/github-mark-white.svg"
+              src="/images/github-sans-aura.webp"
               alt="Logo GitHub"
-              className="github"
+              className="github-logo"
             />
             <img
               src="/images/github-aura.webp"

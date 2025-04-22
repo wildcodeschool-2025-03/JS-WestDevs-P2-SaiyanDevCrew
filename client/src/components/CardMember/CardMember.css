@@ -12,6 +12,7 @@
   border-radius: 15px;
   background-color: var(--overlay-color);
   border: none;
+  padding: 0;
 
   img {
     border-radius: 15px;
@@ -36,27 +37,24 @@
     font-size: 1.3rem;
     margin: 0;
   }
-  .github-link {
-    position: relative;
-  }
-
   .github {
-    height: 30px;
-    padding: 31px 20px 9px 20px;
-    transition: opacity 700ms ease-in;
-    opacity: 1;
+    position: relative;
+    width: 110px;
   }
-  .github:hover::after {
-    content: "";
-    background-image: url("/src/assets/images/github-aura.webp");
-    height: 100px;
-    width: 100px;
+  .github-logo {
+    height: 80px;
   }
   .github-aura {
     position: absolute;
-    height: 100px;
-    left: 10px;
-    bottom: 10px;
+    height: 80px;
+    left: 15px;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  .github-aura:hover {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
