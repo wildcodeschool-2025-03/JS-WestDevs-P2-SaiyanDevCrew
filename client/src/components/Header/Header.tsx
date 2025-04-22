@@ -1,16 +1,17 @@
 import "./Header.css";
+import { Link } from "react-router";
 
 function Header() {
   return (
     <header>
-      <img src="/src/assets/images/Logo.webp" alt="logo du site" />
-      <figure>
-        <h1 className="red">Dragon</h1>
-        <h1>Fight</h1>
-        <h1 className="position">Simulator</h1>
+      <figure className="logo">
+        <img src="images/Logo.webp" alt="logo du site" />
       </figure>
-      <nav>
-        <a href="/">Home</a>
+      <figcaption className="title">
+        <h1>Dragon Fight Simulator</h1>
+      </figcaption>
+      <nav className="home">
+        <Link to="/home">Home</Link>
       </nav>
     </header>
   );
