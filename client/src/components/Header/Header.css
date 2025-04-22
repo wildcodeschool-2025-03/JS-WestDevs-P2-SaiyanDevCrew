@@ -18,6 +18,10 @@ header {
   text-align: center;
 }
 
+h1 span {
+  color: red;
+}
+
 a {
   display: flex;
   border: 1.2px solid black;

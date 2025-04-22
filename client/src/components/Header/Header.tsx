@@ -8,7 +8,9 @@ function Header() {
         <img src="images/Logo.webp" alt="logo du site" />
       </figure>
       <figcaption className="title">
-        <h1>Dragon Fight Simulator</h1>
+        <h1>
+          <span>Dragon</span> Fight Simulator
+        </h1>
       </figcaption>
       <nav className="home">
         <Link to="/home">Home</Link>
