@@ -1,0 +1,14 @@
+.banner-footer {
+  border: 1.2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-footer h2 {
+  font-size: 1.7rem;
+}
+
+.banner-footer img {
+  height: 2rem;
+}
