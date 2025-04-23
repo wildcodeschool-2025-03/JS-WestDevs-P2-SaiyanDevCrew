@@ -10,6 +10,8 @@
   margin-bottom: 5rem;
   margin-top: 15px;
   border: none;
+  transition: all 0.4s ease;
+  cursor: pointer;
 
   img {
     top: -10px;
@@ -18,6 +20,11 @@
     max-width: fit-content;
     object-fit: contain;
     z-index: 1;
+    transition: filter 0.3s ease, transform 0.4s ease, box-shadow 0.3s ease;
+  }
+
+  &:hover:not(.active) img {
+    transform: translateY(-5px) scale(1.02);
   }
 }
 
@@ -27,14 +34,17 @@
 }
 
 .character-data {
+  right: 0;
   background-color: black;
   color: white;
   height: 319px;
-  width: auto;
+  width: 70%;
   padding: 0 1rem 0 1rem;
   border-radius: 0px 20px 20px 0px;
   box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.3);
   text-align: center;
+  animation: slideIn 0.4s ease-out;
+  z-index: 0;
   h2 {
     font-family: var(--font-component);
     font-size: 2rem;
@@ -45,7 +55,6 @@
     font-family: var(--font-text);
   }
   .select-button {
-    align-items: center;
     background-color: rgb(193, 192, 192);
     text-decoration: none;
     border: 2px solid white;
@@ -56,5 +65,41 @@
     font-size: 18px;
     -webkit-text-stroke: 1.5px black;
     color: #fbb224;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
+}
+
+@keyframes slideIn {
+  from {
+    right: -100%;
+    opacity: 0.7;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+/* État actif - lorsqu'une carte est sélectionnée */
+.character-card.active {
+  width: 400px;
+
+  img {
+    transform: translateX(-60px); /* Déplace l'image vers la gauche */
+  }
+}
+
+/* État inactif - pour flouter les cartes non sélectionnées */
+.character:has(.character-card:not(.active)) img {
+  filter: blur(3px) grayscale(50%);
+}
+
+/* Réactive le style normal quand aucune carte n'est active */
+.character:has(.character-card:not(.active)):only-child img,
+.character:not(:has(.character-card.active)) img {
+  filter: none;
 }
