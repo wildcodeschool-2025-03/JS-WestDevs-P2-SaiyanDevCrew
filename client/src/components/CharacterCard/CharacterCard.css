@@ -5,16 +5,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 47vh;
-  width: 60vw;
+  height: 319px;
+  width: 265px;
   border-radius: 20px;
   box-shadow: 5px 10px 10px 5px;
   margin-bottom: 5rem;
+  border: none;
 
   img {
     position: absolute;
     top: -10px; /* Pour dépasser légèrement par le haut */
-    height: 350px; /* Légèrement supérieur à 319px */
+    height: 350px;
     width: auto; /* Respecte les proportions */
     max-width: fit-content;
     object-fit: contain;

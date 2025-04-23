@@ -24,7 +24,7 @@ function CharacterCard({
 }: CardProps) {
   return (
     <div className="character">
-      <button type="reset" className="character-card">
+      <button type="button" className="character-card">
         <img src={image} alt={name} />
       </button>
     </div>
