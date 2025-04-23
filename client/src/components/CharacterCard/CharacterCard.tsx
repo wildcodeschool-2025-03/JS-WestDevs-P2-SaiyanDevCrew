@@ -12,16 +12,7 @@ interface CardProps {
   affiliation: string;
 }
 
-function CharacterCard({
-  image,
-  name,
-  race,
-  gender,
-  description,
-  ki,
-  maxKi,
-  affiliation,
-}: CardProps) {
+function CharacterCard({ image, name }: CardProps) {
   return (
     <div className="character">
       <button type="button" className="character-card">
