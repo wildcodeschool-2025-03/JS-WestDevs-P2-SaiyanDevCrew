@@ -6,9 +6,12 @@
 }
 
 .banner-footer h2 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  -webkit-text-stroke: 0.5px black;
 }
 
 .banner-footer img {
   height: 2rem;
+  margin-right: 0.5rem;
 }
