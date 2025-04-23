@@ -2,7 +2,6 @@
   box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   text-align: center;
   width: 160px;
   height: 240px;
@@ -12,17 +11,22 @@
   border-radius: 15px;
   background-color: var(--overlay-color);
   border: none;
+  padding: 0;
 
   img {
     border-radius: 15px;
     height: 240px;
+    color: white;
   }
+
   article {
     height: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+
   h3 {
     font-family: var(--font-component);
     color: var(--primary-color);
@@ -30,33 +34,36 @@
     -webkit-text-stroke: 0.5px black;
     margin: 0;
   }
+
   p {
     font-family: var(--font-text);
     color: white;
     font-size: 1.3rem;
     margin: 0;
   }
-  .github-link {
-    position: relative;
-  }
 
   .github {
-    height: 30px;
-    padding: 31px 20px 9px 20px;
-    transition: opacity 700ms ease-in;
-    opacity: 1;
+    position: relative;
+    color: white;
+    text-decoration: none;
   }
-  .github:hover::after {
-    content: "";
-    background-image: url("/src/assets/images/github-aura.webp");
-    height: 100px;
-    width: 100px;
+
+  .github-logo {
+    height: 80px;
   }
+
   .github-aura {
     position: absolute;
-    height: 100px;
-    left: 10px;
-    bottom: 10px;
+    height: 80px;
+    left: 30px;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  .github-aura:hover {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
