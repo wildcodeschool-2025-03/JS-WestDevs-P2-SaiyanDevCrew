@@ -8,8 +8,8 @@ import "./global.css";
 
 // Import the main app component
 import App from "./App";
-import HomePage from "./pages/HomePage/HomePage";
 import CrewPage from "./pages/CrewPage/CrewPage";
+import HomePage from "./pages/HomePage/HomePage";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -51,6 +51,7 @@ if (rootElement == null) {
 // Render the app inside the root element
 createRoot(rootElement).render(
   <StrictMode>
+    ,
     <RouterProvider router={router} />
   </StrictMode>
 );
