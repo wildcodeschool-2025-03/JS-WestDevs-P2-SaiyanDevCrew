@@ -10,38 +10,54 @@ interface CardProps {
   ki: string;
   maxKi: string;
   affiliation: string;
+  activeId: number | null;
+  setActiveId: (id: number | null) => void;
 }
 
 function CharacterCard({
   image,
+  id,
   name,
   race,
   gender,
   ki,
   maxKi,
   affiliation,
+  activeId,
+  setActiveId,
 }: CardProps) {
+  const isActive = activeId === id;
+  const toggleCard = () => {
+    setActiveId(isActive ? null : id);
+  };
   return (
     <div className="character">
-      <button type="button" className="character-card">
+      <button
+        type="button"
+        className={`character-card ${isActive ? "active" : ""}`}
+        onClick={toggleCard}
+      >
         <img src={image} alt={name} />
-        <article>
-          <h2>{name}</h2>
-          <p>
-            {race} {gender}
-          </p>
-          <p>
-            Base ki <br />
-            {ki}
-          </p>
-          <p>
-            Maxi Ki <br /> {maxKi}
-          </p>
-          <p>{affiliation}</p>
-          <button type="button" className="selct-button">
-            Select
-          </button>
-        </article>
+        {isActive && (
+          <article className="character-data">
+            <h2>{name}</h2>
+            <p>
+              {race} {gender}
+            </p>
+            <p>
+              Base ki <br />
+              {ki} <br />
+              Maxi Ki <br /> {maxKi}
+            </p>
+            <p>
+              Affiliation <br />
+              {affiliation}
+            </p>
+            <button type="button" className="select-button">
+              Select
+            </button>
+          </article>
+        )}
       </button>
     </div>
   );

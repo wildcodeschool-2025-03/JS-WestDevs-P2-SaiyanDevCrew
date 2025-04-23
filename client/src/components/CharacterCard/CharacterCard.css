@@ -1,7 +1,6 @@
 .character-card {
   display: flex;
   background-color: rgb(193, 192, 192);
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 319px;
@@ -32,26 +31,28 @@
   color: white;
   height: 319px;
   width: auto;
-  border-radius: 0px 20px 20px 0px;
   padding: 0.5rem;
-  box-shadow: 5px 10px 10px 5px;
+  border-radius: 0px 20px 20px 0px;
+  box-shadow: 5px 10px 10px 5px var(--overlay-color);
   text-align: center;
   h2 {
     font-family: var(--font-component);
     font-size: 2rem;
+    -webkit-text-stroke: 0.5px white;
     color: #fbb224;
   }
   p {
     font-family: var(--font-text);
   }
-  a {
+  .select-button {
     align-items: center;
     background-color: rgb(193, 192, 192);
     text-decoration: none;
     border: 2px solid white;
-    padding: 0 0.5rem 0 0.5rem;
+    padding: 0.2rem 1rem 0.2rem 1rem;
     border-radius: 10px;
     font-family: var(--font-component);
+    -webkit-text-stroke: 0.5px black;
     color: #fbb224;
   }
 }
