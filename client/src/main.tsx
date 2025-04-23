@@ -36,7 +36,6 @@ const router = createBrowserRouter([
       },
     ], // Renders the App component for the home page
   },
-
   // Try adding a new route! For example, "/about" with an About component
 ]);
 
