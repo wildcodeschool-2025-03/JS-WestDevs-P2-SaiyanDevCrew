@@ -8,10 +8,7 @@ interface BatllepageProps {
 function Battlepage({image, name}: BatllepageProps) {
   return (
     <figure>
-      <img src={image} alt={name}/>
-
-      <button>Fight</button>
-      
+      <img src={image} alt={name}/>      
     </figure>
   )
 }

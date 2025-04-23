@@ -1,52 +1,69 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Battlepage from "./pages/Battlepage/Battlepage";
+import React from "react";
+import { Outlet } from "react-router";
 
-const arrayOfDragonball= [
-  {
-  name: "Goku",
-  image: "https://dragonball-api.com/characters/goku_normal.webp"
-  },
-  {
-   name: "Vegeta",
-   image: "https://dragonball-api.com/characters/vegeta_normal.webp"
-  },
-  {
-    name: "Celula",
-    image: "https://dragonball-api.com/characters/celula.webp"
-  },
-  {
-    name: "Freezer",
-    image:  "https://dragonball-api.com/characters/Freezer.webp"
-  },
-]
-
-interface BattleData
+interface BattlepageData {
+  id: number;
+  name: string;
+  image: string;
+}
 
 function App() {
-const [DragonballData, setDragonballData] = useState ([]);
+const [BattlepageData, setBattlepageData] = useState<BattlepageData[][]>([]);
+
+function getPair(items:BattlepageData[]) {
+  const characters= [];
+  for (let i=0; i <items.length; i++) {
+  const pair= [];
+  pair.push (items[i])
+  pair.push (items[i+1])
+  characters.push(pair)
+  i++
+  }
+  return characters
+} 
 
 useEffect (()=> {
 fetch("https://dragonball-api.com/api/characters")
 .then ((response) => response.json())
-.then ((data) => setDragonballData (data.results))
+.then ((data) => {
+const characters= data.items.slice (0,4) 
+console.log (characters);
+const pair= getPair (characters);
+setBattlepageData(pair)
+})
 }, []);
 
   return ( 
   <>
   <main className="app">
-    {arrayOfDragonball.map((element) => {
-      return (
-        <Battlepage 
-         key={element.id} 
-         name= {element.name} 
-         image={element.image} 
+    {BattlepageData.map((element) => {
+
+     return   (
+      <React.Fragment key={element[0].id}>
+      <Battlepage 
+         
+         name= {element[0].name} 
+         image={element[0].image} 
          />
-      )
+         <Battlepage 
+       
+         name= {element[1].name} 
+         image={element[1].image} 
+
+         />
+         <button type="button">Fight</button>
+      </React.Fragment>
+     )
+    
       })}
   </main>
+  <Outlet/>
   </>
   );
 }
 
 export default App;
+
