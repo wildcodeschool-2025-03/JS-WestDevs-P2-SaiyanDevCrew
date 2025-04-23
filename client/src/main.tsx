@@ -30,12 +30,13 @@ const router = createBrowserRouter([
         path: "/CrewPage",
         element: <CrewPage />,
       },
+      {
+        path: "/Home",
+        element: <HomePage />,
+      },
     ], // Renders the App component for the home page
   },
-  {
-    path: "home",
-    element: <HomePage />,
-  },
+
   // Try adding a new route! For example, "/about" with an About component
 ]);
 

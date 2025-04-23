@@ -1,11 +1,11 @@
-.homepage {
+.home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 @media (min-width: 992px) {
-  .homepage {
+  .home-page {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
