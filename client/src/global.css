@@ -1,8 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
 @font-face {
   font-family: "Saiyan Sans";
   src: local("Saiyan Sans"), url("./assets/Fonts/saiyan_sans/Saiyan-Sans.ttf")
     format("truetype");
 }
+
 @font-face {
   font-family: "Inter";
   src: local("Trickster"),
@@ -27,11 +36,4 @@ h2 {
   -webkit-text-stroke: 1.5px black;
   font-size: 5rem;
   letter-spacing: 0.3rem;
-}
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
 }
