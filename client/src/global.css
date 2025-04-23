@@ -8,15 +8,13 @@ body {
 
 @font-face {
   font-family: "Saiyan Sans";
-  src: local("Saiyan Sans"), url("./assets/Fonts/saiyan_sans/Saiyan-Sans.ttf")
-    format("truetype");
+  src: local("Saiyan Sans"), url("./assets/Fonts/saiyan_sans/Saiyan-Sans.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Inter";
   src: local("Trickster"),
-    url("./assets/Fonts/Inter/Inter-VariableFont_opsz\,wght.ttf")
-    format("truetype");
+    url("./assets/Fonts/Inter/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
 }
 
 :root {
@@ -36,11 +34,4 @@ h2 {
   -webkit-text-stroke: 1.5px black;
   font-size: 5rem;
   letter-spacing: 0.3rem;
-}
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
 }
