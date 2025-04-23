@@ -13,4 +13,25 @@
 :root {
   --font-text: "Inter", sans-serif;
   --font-component: "Saiyan Sans", cursive;
+  --primary-color: rgba(251, 178, 36, 1);
+  --secondary-color: rgba(217, 217, 217, 1);
+  --tertiary-color: rgba(220, 43, 21, 1);
+  --overlay-color: rgba(30, 30, 30, 1);
+}
+
+h2 {
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-family: var(--font-component);
+  color: var(--primary-color);
+  -webkit-text-stroke: 1.5px black;
+  font-size: 5rem;
+  letter-spacing: 0.3rem;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
 }

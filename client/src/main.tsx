@@ -8,7 +8,8 @@ import "./global.css";
 
 // Import the main app component
 import App from "./App";
-import HomePage from "./pages/homePage/homePage";
+import HomePage from "./pages/HomePage/HomePage";
+import CrewPage from "./pages/CrewPage/CrewPage";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -23,7 +24,13 @@ import HomePage from "./pages/homePage/homePage";
 const router = createBrowserRouter([
   {
     path: "/", // The root path
-    element: <App />, // Renders the App component for the home page
+    element: <App />,
+    children: [
+      {
+        path: "/CrewPage",
+        element: <CrewPage />,
+      },
+    ], // Renders the App component for the home page
   },
   {
     path: "home",
