@@ -22,7 +22,7 @@ function HomePage() {
       .then((data) => setCharacterData(data.items));
   }, []);
   return (
-    <main className="homepage">
+    <main className="home-page">
       {characterData.map((el) => (
         <CharacterCard
           key={el.id}
