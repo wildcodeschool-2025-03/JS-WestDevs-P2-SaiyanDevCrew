@@ -17,7 +17,6 @@ function CharacterCard({
   name,
   race,
   gender,
-  description,
   ki,
   maxKi,
   affiliation,
@@ -26,6 +25,23 @@ function CharacterCard({
     <div className="character">
       <button type="button" className="character-card">
         <img src={image} alt={name} />
+        <article>
+          <h2>{name}</h2>
+          <p>
+            {race} {gender}
+          </p>
+          <p>
+            Base ki <br />
+            {ki}
+          </p>
+          <p>
+            Maxi Ki <br /> {maxKi}
+          </p>
+          <p>{affiliation}</p>
+          <button type="button" className="selct-button">
+            Select
+          </button>
+        </article>
       </button>
     </div>
   );

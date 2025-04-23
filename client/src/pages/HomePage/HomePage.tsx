@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import CharacterCard from "../../components/CharacterCard/CharacterCard";
 import "../homePage/homePage.css";
-import { data } from "react-router";
 
 interface CharacterProps {
   id: number;
