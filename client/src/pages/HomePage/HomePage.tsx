@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import CharacterCard from "../../components/CharacterCard/CharacterCard";
-import "../homePage/homePage.css";
+import "./HomePage.css";
 
 interface CharacterProps {
   id: number;

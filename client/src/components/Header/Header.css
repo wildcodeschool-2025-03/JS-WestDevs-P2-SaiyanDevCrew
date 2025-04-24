@@ -23,7 +23,7 @@
   color: var(--tertiary-color);
 }
 
-.banner-header nav :link {
+.banner-header nav a {
   display: flex;
   border: 1.2px solid black;
   justify-content: center;
