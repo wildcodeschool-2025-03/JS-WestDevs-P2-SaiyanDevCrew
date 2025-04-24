@@ -9,6 +9,8 @@ import "./global.css";
 // Import the main app component
 import App from "./App";
 import Battlepage from "./pages/Battlepage/Battlepage";
+import CrewPage from "./pages/CrewPage/CrewPage";
+import HomePage from "./pages/HomePage/HomePage";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -23,12 +25,23 @@ import Battlepage from "./pages/Battlepage/Battlepage";
 const router = createBrowserRouter([
   {
     path: "/", // The root path
-    element: <App />, // Renders the App component for the home page
+    element: <App />,
+    children: [
+      {
+        path: "/crew-page",
+        element: <CrewPage />,
+      },
+      {
+        path: "/home",
+        element: <HomePage />,
+      },
+      {
+        path: "/battle-page",
+        element: <Battlepage />,
+      },
+    ], // Renders the App component for the home page
   },
-  {
-    path: "/battle-page",
-    element: <Battlepage />,
-  },
+ 
   // Try adding a new route! For example, "/about" with an About component
 ]);
 

@@ -1,12 +1,14 @@
-import "./App.css";
-import Battlepage from "./pages/Battlepage/Battlepage";
 import { Outlet } from "react-router";
+import "./App.css";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <>
-      <Battlepage />
+      <Header />
       <Outlet />
+      <Footer />
     </>
   );
 }
