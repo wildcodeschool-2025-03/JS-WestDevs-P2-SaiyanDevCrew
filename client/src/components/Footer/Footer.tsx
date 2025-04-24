@@ -4,7 +4,7 @@ import { Link } from "react-router";
 function Footer() {
   return (
     <footer className="banner-footer">
-      <Link to="/CrewPage">Le Crew</Link>
+      <Link to="/crew-page">Le Crew</Link>
       <p>&copy; copyright 2025 - Sayian Crew</p>
       <figure>
         <a href="https://github.com/" target="blank">
