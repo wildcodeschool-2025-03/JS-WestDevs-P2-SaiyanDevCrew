@@ -10,15 +10,12 @@
   margin-bottom: 5rem;
   margin-top: 15px;
   border: none;
-  transition: all 0.4s ease;
   cursor: pointer;
 
   img {
     top: -10px;
     height: 350px;
     width: auto;
-    max-width: fit-content;
-    object-fit: contain;
     z-index: 1;
     transition: filter 0.3s ease, transform 0.4s ease, box-shadow 0.3s ease;
   }
@@ -58,7 +55,7 @@
     background-color: rgb(193, 192, 192);
     text-decoration: none;
     border: 2px solid white;
-    padding: 0.2rem 1rem 0.2rem 1rem;
+    padding: 0.3rem 1rem 0.2rem 1rem;
     border-radius: 10px;
     font-family: var(--font-component);
     text-transform: uppercase;
@@ -77,29 +74,14 @@
 @keyframes slideIn {
   from {
     right: -100%;
-    opacity: 0.7;
+    opacity: 0.5;
   }
   to {
     right: 0;
     opacity: 1;
   }
 }
-/* État actif - lorsqu'une carte est sélectionnée */
-.character-card.active {
-  width: 400px;
 
-  img {
-    transform: translateX(-60px); /* Déplace l'image vers la gauche */
-  }
-}
-
-/* État inactif - pour flouter les cartes non sélectionnées */
-.character:has(.character-card:not(.active)) img {
-  filter: blur(3px) grayscale(50%);
-}
-
-/* Réactive le style normal quand aucune carte n'est active */
-.character:has(.character-card:not(.active)):only-child img,
-.character:not(:has(.character-card.active)) img {
-  filter: none;
+img {
+  transform: translateX(-5px);
 }
