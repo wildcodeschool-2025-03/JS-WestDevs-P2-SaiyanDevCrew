@@ -9,6 +9,7 @@ import "./global.css";
 // Import the main app component
 import App from "./App";
 import CrewPage from "./pages/CrewPage/CrewPage";
+import HomePage from "./pages/HomePage/HomePage";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -29,8 +30,13 @@ const router = createBrowserRouter([
         path: "/CrewPage",
         element: <CrewPage />,
       },
+      {
+        path: "/Home",
+        element: <HomePage />,
+      },
     ], // Renders the App component for the home page
   },
+
   // Try adding a new route! For example, "/about" with an About component
 ]);
 
