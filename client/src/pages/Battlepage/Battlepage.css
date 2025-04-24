@@ -1,1 +1,12 @@
+figure {
+  display: flex;
+  height: 150px;
+  border: solid red;
+  width: 90px;
+  justify-content: center;
+  display: flex;
+}
 
+img {
+  display: flex;
+}

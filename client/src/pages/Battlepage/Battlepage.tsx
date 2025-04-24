@@ -1,15 +1,48 @@
-import "./Battlepage.css"
+import { useEffect, useState } from "react";
+import "./Battlepage.css";
+import Fighter from "../../components/Figther/Figther";
 
-interface BatllepageProps {
-  image: string;
+interface BattlepageData {
+  id: number;
   name: string;
+  image: string;
 }
 
-function Battlepage({image, name}: BatllepageProps) {
+function Battlepage() {
+  const [BattlepageData, setBattlepageData] = useState<BattlepageData[]>([]);
+
+  useEffect(() => {
+    fetch("https://dragonball-api.com/api/characters")
+      .then((response) => response.json())
+      .then((data) => {
+        setBattlepageData(data.items);
+      });
+  }, []);
+
   return (
-    <figure>
-      <img src={image} alt={name}/>      
-    </figure>
-  )
+    <>
+      <main className="app">
+        {BattlepageData.slice(0, 2).map((element) => {
+          return (
+            <Fighter
+              key={element.id}
+              name={element.name}
+              image={element.image}
+            />
+          );
+        })}
+        <button type="button">fight</button>
+        {BattlepageData.slice(3, 5).map((element) => {
+          return (
+            <Fighter
+              key={element.id}
+              name={element.name}
+              image={element.image}
+            />
+          );
+        })}
+      </main>
+    </>
+  );
 }
 export default Battlepage;
