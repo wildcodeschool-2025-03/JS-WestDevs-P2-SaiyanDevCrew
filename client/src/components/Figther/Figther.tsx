@@ -1,5 +1,4 @@
 import "./Figther.css";
-
 interface BatllepageProps {
   image: string;
   name: string;

@@ -22,25 +22,31 @@ function Battlepage() {
   return (
     <>
       <main className="app">
-        {BattlepageData.slice(0, 2).map((element) => {
-          return (
-            <Fighter
-              key={element.id}
-              name={element.name}
-              image={element.image}
-            />
-          );
-        })}
-        <button type="button">fight</button>
-        {BattlepageData.slice(3, 5).map((element) => {
-          return (
-            <Fighter
-              key={element.id}
-              name={element.name}
-              image={element.image}
-            />
-          );
-        })}
+        <div className="deck1">
+          {BattlepageData.slice(0, 2).map((element) => {
+            return (
+              <Fighter
+                key={element.id}
+                name={element.name}
+                image={element.image}
+              />
+            );
+          })}
+        </div>
+        <button className="fight" type="button">
+          fight
+        </button>
+        <div className="deck2">
+          {BattlepageData.slice(3, 5).map((element) => {
+            return (
+              <Fighter
+                key={element.id}
+                name={element.name}
+                image={element.image}
+              />
+            );
+          })}
+        </div>
       </main>
     </>
   );
