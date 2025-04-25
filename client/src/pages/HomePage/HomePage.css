@@ -13,4 +13,7 @@
     gap: 3rem;
     justify-content: center;
   }
+  .character-card.active {
+    width: 400px;
+  }
 }

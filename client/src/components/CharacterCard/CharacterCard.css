@@ -1,24 +1,28 @@
 .character-card {
   display: flex;
   background-color: rgb(193, 192, 192);
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 319px;
   width: 265px;
   border-radius: 20px;
-  box-shadow: 5px 10px 10px 5px;
+  box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.3);
   margin-bottom: 5rem;
   margin-top: 15px;
   border: none;
+  cursor: pointer;
 
   img {
     top: -10px;
     height: 350px;
     width: auto;
-    max-width: fit-content;
-    object-fit: contain;
     z-index: 1;
+    transition: filter 0.3s ease, transform 0.4s ease, box-shadow 0.3s ease;
+    transform: translateX(-5px);
+  }
+
+  &:hover:not(.active) img {
+    transform: translateY(-5px) scale(1.02);
   }
 }
 
@@ -28,30 +32,54 @@
 }
 
 .character-data {
+  right: 0;
   background-color: black;
   color: white;
   height: 319px;
-  width: auto;
+  width: 70%;
+  padding: 0 1rem 0 1rem;
   border-radius: 0px 20px 20px 0px;
-  padding: 0.5rem;
-  box-shadow: 5px 10px 10px 5px;
+  box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.3);
   text-align: center;
+  animation: slideIn 0.4s ease-out;
+  z-index: 0;
+
   h2 {
     font-family: var(--font-component);
     font-size: 2rem;
+    -webkit-text-stroke: 0.5px white;
     color: #fbb224;
   }
   p {
     font-family: var(--font-text);
   }
-  a {
-    align-items: center;
+  .select-button {
     background-color: rgb(193, 192, 192);
     text-decoration: none;
     border: 2px solid white;
-    padding: 0 0.5rem 0 0.5rem;
+    padding: 0.3rem 1rem 0.2rem 1rem;
     border-radius: 10px;
     font-family: var(--font-component);
+    text-transform: uppercase;
+    font-size: 18px;
+    -webkit-text-stroke: 1.5px black;
     color: #fbb224;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    right: -100%;
+    opacity: 0.5;
+  }
+  to {
+    right: 0;
+    opacity: 1;
   }
 }
