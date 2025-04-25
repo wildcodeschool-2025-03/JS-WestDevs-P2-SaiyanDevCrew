@@ -10,6 +10,7 @@ import "./global.css";
 import App from "./App";
 import CrewPage from "./pages/CrewPage/CrewPage";
 import HomePage from "./pages/HomePage/HomePage";
+import AnimatedPage from "./pages/AnimatedPage/AnimatedPage";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <HomePage />,
+      },
+      {
+        path: "/animation",
+        element: <AnimatedPage />,
       },
     ], // Renders the App component for the home page
   },
