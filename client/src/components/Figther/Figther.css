@@ -1,4 +1,4 @@
-figure {
+.fighter-card {
   display: flex;
   height: 125px;
   width: 90px;
@@ -8,9 +8,13 @@ figure {
   background-color: rgb(193, 192, 192);
   border-radius: 10px;
   box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.3);
+  img {
+    height: 150px;
+  }
 }
 
-img {
-  display: flex;
-  height: 150px;
+@media (min-width: 768px) {
+  .fighter-card {
+    margin: 16px 20px;
+  }
 }

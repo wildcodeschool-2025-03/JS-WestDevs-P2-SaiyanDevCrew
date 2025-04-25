@@ -6,7 +6,7 @@ interface BatllepageProps {
 
 function Fighter({ image, name }: BatllepageProps) {
   return (
-    <figure>
+    <figure className="fighter-card">
       <img src={image} alt={name} />
     </figure>
   );
