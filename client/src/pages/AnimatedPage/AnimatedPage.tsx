@@ -1,6 +1,6 @@
 import WinnerFigth from "../../components/WinnerFigth/WinnerFignt";
 import "./AnimatedPage.css";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import animated from "../../data/animated.json";
 
 function AnimatedPage() {
