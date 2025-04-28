@@ -3,7 +3,7 @@ import "./WinnerFigth.css";
 interface WinProps {
   image: string;
   name: string;
-  id: string;
+  id: number;
 }
 
 function WinnerFigth({ el }: { el: WinProps }) {

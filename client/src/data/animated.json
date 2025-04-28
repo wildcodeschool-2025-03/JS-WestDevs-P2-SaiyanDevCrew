@@ -1,34 +1,34 @@
 {
   "winners": [
     {
-      "id": "1",
+      "id": 1,
       "image": "https://i.pinimg.com/originals/f2/e2/e2/f2e2e20d0018aaa18c309734ed23abae.gif",
-      "name": ""
+      "name": "Battle 1"
     },
     {
-      "id": "2",
+      "id": 2,
       "image": "https://i.pinimg.com/originals/2d/eb/8c/2deb8ccffc9f93ade5d8e8e21c1ef719.gif",
-      "name": ""
+      "name": "Battle 2"
     },
     {
-      "id": "3",
+      "id": 3,
       "image": "https://i.pinimg.com/originals/69/13/b8/6913b8b307bda41306c0f04069e38f7c.gif",
-      "name": ""
+      "name": "Battle 3"
     },
     {
-      "id": "4",
+      "id": 4,
       "image": "https://i.pinimg.com/originals/11/15/08/1115087d047c371129aed7e9ac134f79.gif",
-      "name": ""
+      "name": "Battle 4"
     },
     {
-      "id": "5",
+      "id": 5,
       "image": "https://i.pinimg.com/originals/e1/9c/c3/e19cc31879ef579152b26d659b7c4530.gif",
-      "name": ""
+      "name": "Battle 5"
     },
     {
-      "id": "6",
+      "id": 6,
       "image": "https://i.pinimg.com/originals/65/b1/60/65b1602169aea43c6357d9a7e1711c74.gif",
-      "name": ""
+      "name": "Battle 6"
     }
   ]
 }
