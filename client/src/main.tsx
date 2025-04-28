@@ -8,6 +8,7 @@ import "./global.css";
 
 // Import the main app component
 import App from "./App";
+import Battlepage from "./pages/Battlepage/Battlepage";
 import CrewPage from "./pages/CrewPage/CrewPage";
 import HomePage from "./pages/HomePage/HomePage";
 import AnimatedPage from "./pages/AnimatedPage/AnimatedPage";
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/animation",
         element: <AnimatedPage />,
+      },
+      {
+        path: "/battle-page",
+        element: <Battlepage />,
       },
     ], // Renders the App component for the home page
   },
