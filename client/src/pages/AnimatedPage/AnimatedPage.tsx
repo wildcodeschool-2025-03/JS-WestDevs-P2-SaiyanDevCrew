@@ -5,7 +5,7 @@ import animated from "../../data/animated.json";
 function AnimatedPage() {
   return (
     <main className="fight-club">
-      {animated.map((anime) => (
+      {animated.winners.map((anime) => (
         <WinnerFigth key={anime.id} el={anime} />
       ))}
     </main>
