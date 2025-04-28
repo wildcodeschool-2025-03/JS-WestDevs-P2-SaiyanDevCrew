@@ -33,7 +33,15 @@ h2 {
   text-align: center;
   font-family: var(--font-component);
   color: var(--primary-color);
-  -webkit-text-stroke: 1.5px black;
+  -webkit-text-stroke: 8px black;
   font-size: 5rem;
   letter-spacing: 0.3rem;
+}
+
+h1,
+h2,
+h3,
+a {
+  font-weight: 100;
+  paint-order: stroke;
 }
