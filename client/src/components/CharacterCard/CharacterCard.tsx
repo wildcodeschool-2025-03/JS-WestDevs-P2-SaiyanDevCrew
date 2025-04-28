@@ -12,6 +12,7 @@ interface CardProps {
   affiliation: string;
   activeId: number | null;
   setActiveId: (id: number | null) => void;
+  setSelectCharacter: () => ;
 }
 
 function CharacterCard({
@@ -29,6 +30,10 @@ function CharacterCard({
   const isActive = activeId === id;
   const toggleCard = () => {
     setActiveId(isActive ? null : id);
+  };
+  
+  const selected = () => {
+    setSelectCharacter()
   };
   return (
     <div className="character">
@@ -53,7 +58,7 @@ function CharacterCard({
               Affiliation <br />
               {affiliation}
             </p>
-            <button type="button" className="select-button">
+            <button type="button" className="select-button" onClick={selected}>
               Select
             </button>
           </article>
