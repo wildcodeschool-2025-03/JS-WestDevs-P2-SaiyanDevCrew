@@ -1,5 +1,4 @@
 .animated {
-
   margin: 16px auto;
 
   img {
@@ -9,7 +8,6 @@
 
 @media (min-width: 992px) {
   .animated {
-
     img {
       width: 650px;
     }

@@ -8,10 +8,10 @@ import "./global.css";
 
 // Import the main app component
 import App from "./App";
+import AnimatedPage from "./pages/AnimatedPage/AnimatedPage";
 import Battlepage from "./pages/Battlepage/Battlepage";
 import CrewPage from "./pages/CrewPage/CrewPage";
 import HomePage from "./pages/HomePage/HomePage";
-import AnimatedPage from "./pages/AnimatedPage/AnimatedPage";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder

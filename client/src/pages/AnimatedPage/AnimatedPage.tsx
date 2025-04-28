@@ -1,7 +1,7 @@
 import WinnerFigth from "../../components/WinnerFigth/WinnerFignt";
 import "./AnimatedPage.css";
-import animated from "../../data/animated.json";
 import { useState, useEffect } from "react";
+import animated from "../../data/animated.json";
 
 function AnimatedPage() {
   const [randomWinner, setRandomWinner] = useState(animated.winners[0]);
