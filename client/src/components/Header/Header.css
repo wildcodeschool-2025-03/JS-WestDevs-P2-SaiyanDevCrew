@@ -16,7 +16,7 @@
   color: var(--primary-color);
   -webkit-text-stroke: 8px black;
   text-align: center;
-  /* letter-spacing: 0.3rem; */
+  letter-spacing: 2px;
 }
 
 .banner-header figcaption h1 span {
@@ -29,7 +29,7 @@
   justify-content: center;
   text-decoration: none;
   color: var(--primary-color);
-  -webkit-text-stroke: 4px black;
+  -webkit-text-stroke: 5px black;
   background-color: var(--secondary-color);
   border-radius: 10px;
   padding: 6px;
