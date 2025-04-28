@@ -1,0 +1,17 @@
+.animated {
+
+  margin: 16px auto;
+
+  img {
+    width: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  .animated {
+
+    img {
+      width: 650px;
+    }
+  }
+}
