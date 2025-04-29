@@ -17,7 +17,8 @@ interface CharacterProps {
 function HomePage() {
   const [characterData, setCharacterData] = useState<CharacterProps[]>([]);
   const [activeId, setActiveId] = useState<number | null>(null);
-
+  const [selectCharacter, setSelectCharacter] = useState<string>("");
+  console.warn(selectCharacter);
   useEffect(() => {
     fetch("https://dragonball-api.com/api/characters?limit=100")
       .then((response) => response.json())
@@ -39,6 +40,7 @@ function HomePage() {
           affiliation={el.affiliation}
           activeId={activeId}
           setActiveId={setActiveId}
+          setSelectCharacter={setSelectCharacter}
         />
       ))}
     </main>
