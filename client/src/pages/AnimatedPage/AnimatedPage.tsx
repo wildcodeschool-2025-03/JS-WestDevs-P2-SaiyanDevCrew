@@ -12,9 +12,9 @@ function AnimatedPage() {
   }, []);
 
   return (
-    <main className="fight-club">
-      <WinnerFigth el={randomWinner} />
-    </main>
+    <div className="fight-club">
+      <WinnerFigth Winner={randomWinner} />
+    </div>
   );
 }
 

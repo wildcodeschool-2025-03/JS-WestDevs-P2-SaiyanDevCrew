@@ -6,10 +6,10 @@ interface WinProps {
   id: number;
 }
 
-function WinnerFigth({ el }: { el: WinProps }) {
+function WinnerFigth({ Winner }: { Winner: WinProps }) {
   return (
     <figure className="animated">
-      <img src={el.image} alt={el.name} />
+      <img src={Winner.image} alt={Winner.name} />
     </figure>
   );
 }
