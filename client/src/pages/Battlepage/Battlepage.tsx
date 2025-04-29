@@ -11,13 +11,13 @@ interface BattlepageData {
 function Battlepage() {
   const [BattlepageData, setBattlepageData] = useState<BattlepageData[]>([]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     fetch("https://dragonball-api.com/api/characters")
       .then((response) => response.json())
       .then((data) => {
         setBattlepageData(data.items);
       });
-  }, []);
+  }, []);*/
 
   return (
     <>

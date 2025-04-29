@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import CharacterCard from "../../components/CharacterCard/CharacterCard";
 import "./HomePage.css";
+import Fighter from "../../components/Figther/Figther";
 
 interface CharacterProps {
   id: number;
@@ -26,6 +27,13 @@ function HomePage() {
   }, []);
   return (
     <main className="home-page">
+      <article className="Deck">
+        <Fighter />
+        <button className="arene" type="button">
+          Arene
+        </button>
+        <Fighter />
+      </article>
       {characterData.map((el) => (
         <CharacterCard
           key={el.id}
