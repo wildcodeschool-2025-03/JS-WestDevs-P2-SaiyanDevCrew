@@ -1,7 +1,7 @@
 import "./Figther.css";
 interface BatllepageProps {
   image: string;
-  name: string;
+  name?: string;
 }
 
 function Fighter({ image, name }: BatllepageProps) {

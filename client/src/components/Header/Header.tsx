@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="banner-header">
       <figure>
-        <img src="images/Logo.webp" alt="logo du site" />
+        <img src="/public/images/Logo.webp" alt="logo du site" />
       </figure>
       <figcaption>
         <h1>

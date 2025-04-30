@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/battle-page",
+        path: "/battle-page/:char1/:char2/:char3/:char4",
         element: <Battlepage />,
       },
     ], // Renders the App component for the home page
