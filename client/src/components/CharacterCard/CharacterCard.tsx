@@ -33,20 +33,6 @@ function CharacterCard({
     setActiveId(isActive ? null : id);
   };
 
-  const handleSelectCharacter = () => {
-    const character = {
-      id,
-      image,
-      name,
-      race,
-      gender,
-      ki,
-      maxKi,
-      affiliation,
-    };
-
-    setSelectCharacter(character.image);
-  };
   return (
     <div className="character">
       <button
@@ -73,9 +59,8 @@ function CharacterCard({
             <button
               type="button"
               className="select-button"
-              onClick={(e) => {
-                e.stopPropagation();
-                handleSelectCharacter();
+              onClick={() => {
+                setSelectCharacter();
               }}
             >
               Select
