@@ -1,0 +1,11 @@
+.fight-club {
+  display: flex;
+  align-items: center;
+  height: 70vh;
+}
+
+@media (min-width: 992px) {
+  .fight-club {
+    justify-content: center;
+  }
+}
