@@ -1,7 +1,7 @@
 import "./Battlepage.css";
-import Fighter from "../../components/Figther/Figther";
-import { useParams } from "react-router";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import Fighter from "../../components/Figther/Figther";
 import type { CharacterProps } from "../HomePage/HomePage";
 
 function Battlepage() {

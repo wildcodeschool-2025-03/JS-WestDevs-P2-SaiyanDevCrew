@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import CharacterCard from "../../components/CharacterCard/CharacterCard";
 import "./HomePage.css";
-import Fighter from "../../components/Figther/Figther";
 import { useNavigate } from "react-router";
+import Fighter from "../../components/Figther/Figther";
+
 export interface CharacterProps {
   id: number;
   image: string;
