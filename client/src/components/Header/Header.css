@@ -23,6 +23,12 @@
   color: var(--tertiary-color);
 }
 
+.banner-header nav {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 3rem;
+}
+
 .banner-header nav a {
   display: flex;
   border: 1.2px solid black;
@@ -43,15 +49,28 @@
 
 @media (min-width: 768px) {
   .banner-header {
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
   }
 
-  .banner-header figcaption h1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
+  .banner-header .figure {
+    grid-column: 1/2;
+  }
+
+  .banner-header .title {
+    grid-column: 2/3;
+    justify-items: left;
+
+    .simulator {
+      display: flex;
+      width: 300px;
+      justify-content: center;
+    }
+  }
+
+  .banner-header nav {
+    grid-column: 3/3;
+    justify-content: end;
   }
 
   .banner-header nav :link {
