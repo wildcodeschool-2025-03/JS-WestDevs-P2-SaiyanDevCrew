@@ -42,17 +42,22 @@ function HomePage() {
       <article className="Deck">
         <Fighter image={selectCharacter[0]?.image} />
         <Fighter image={selectCharacter[1]?.image} />
-        <button
-          className="arene"
-          type="button"
-          onClick={() => {
-            navigate(
-              `/battle-page/${selectCharacter[0].id}/${selectCharacter[1].id}/${selectCharacter[2].id}/${selectCharacter[3].id}`,
-            );
-          }}
-        >
-          Arene
-        </button>
+        <div className="versus">
+          <h3>V.S.</h3>
+        </div>
+        <div className="three">
+          <button
+            className="arene"
+            type="button"
+            onClick={() => {
+              navigate(
+                `/battle-page/${selectCharacter[0].id}/${selectCharacter[1].id}/${selectCharacter[2].id}/${selectCharacter[3].id}`,
+              );
+            }}
+          >
+            Arene
+          </button>
+        </div>
         <Fighter image={selectCharacter[2]?.image} />
         <Fighter image={selectCharacter[3]?.image} />
       </article>
