@@ -40,12 +40,8 @@ function HomePage() {
   return (
     <main className="home-page">
       <article className="Deck">
-        <div className="one">
-          <Fighter image={selectCharacter[0]?.image} />
-        </div>
-        <div className="two">
-          <Fighter image={selectCharacter[1]?.image} />
-        </div>
+        <Fighter image={selectCharacter[0]?.image} />
+        <Fighter image={selectCharacter[1]?.image} />
         <div className="versus">
           <h3>V.S.</h3>
         </div>
@@ -62,12 +58,8 @@ function HomePage() {
             Arene
           </button>
         </div>
-        <div className="four">
-          <Fighter image={selectCharacter[2]?.image} />
-        </div>
-        <div className="five">
-          <Fighter image={selectCharacter[3]?.image} />
-        </div>
+        <Fighter image={selectCharacter[2]?.image} />
+        <Fighter image={selectCharacter[3]?.image} />
       </article>
       {characterData.map((el) => (
         <CharacterCard
