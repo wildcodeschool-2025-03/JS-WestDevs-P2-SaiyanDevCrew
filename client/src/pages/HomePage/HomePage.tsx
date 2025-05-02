@@ -40,21 +40,34 @@ function HomePage() {
   return (
     <main className="home-page">
       <article className="Deck">
-        <Fighter image={selectCharacter[0]?.image} />
-        <Fighter image={selectCharacter[1]?.image} />
-        <button
-          className="arene"
-          type="button"
-          onClick={() => {
-            navigate(
-              `/battle-page/${selectCharacter[0].id}/${selectCharacter[1].id}/${selectCharacter[2].id}/${selectCharacter[3].id}`,
-            );
-          }}
-        >
-          Arene
-        </button>
-        <Fighter image={selectCharacter[2]?.image} />
-        <Fighter image={selectCharacter[3]?.image} />
+        <div className="one">
+          <Fighter image={selectCharacter[0]?.image} />
+        </div>
+        <div className="two">
+          <Fighter image={selectCharacter[1]?.image} />
+        </div>
+        <div className="versus">
+          <h3>V.S.</h3>
+        </div>
+        <div className="three">
+          <button
+            className="arene"
+            type="button"
+            onClick={() => {
+              navigate(
+                `/battle-page/${selectCharacter[0].id}/${selectCharacter[1].id}/${selectCharacter[2].id}/${selectCharacter[3].id}`,
+              );
+            }}
+          >
+            Arene
+          </button>
+        </div>
+        <div className="four">
+          <Fighter image={selectCharacter[2]?.image} />
+        </div>
+        <div className="five">
+          <Fighter image={selectCharacter[3]?.image} />
+        </div>
       </article>
       {characterData.map((el) => (
         <CharacterCard
