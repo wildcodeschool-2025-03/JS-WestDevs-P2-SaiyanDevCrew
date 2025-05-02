@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         element: <CrewPage />,
       },
       {
-        path: "/home",
+        path: "/",
         element: <HomePage />,
       },
       {
