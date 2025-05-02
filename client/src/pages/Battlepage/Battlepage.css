@@ -28,7 +28,6 @@
 }
 
 @media (min-width: 768px) {
-
   .app {
     display: block;
     text-align: center;
@@ -42,5 +41,4 @@
     justify-content: flex-end;
     padding-bottom: 15vh;
   }
-
 }
