@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Fighter from "../../components/Figther/Figther";
 import type { CharacterProps } from "../HomePage/HomePage";
+import { useNavigate } from "react-router";
 
 function Battlepage() {
   const params = useParams();
+  const navigate = useNavigate();
   const [characters, setCharacters] = useState<[] | CharacterProps[]>([]);
   useEffect(() => {
     fetch("https://dragonball-api.com/api/characters?limit=100")
@@ -27,7 +29,11 @@ function Battlepage() {
           <Fighter image={characters[0]?.image} />
           <Fighter image={characters[1]?.image} />
         </div>
-        <button className="fight" type="button">
+        <button
+          className="fight"
+          type="button"
+          onClick={() => navigate("/animation")}
+        >
           fight
         </button>
         <div className="deck2">
