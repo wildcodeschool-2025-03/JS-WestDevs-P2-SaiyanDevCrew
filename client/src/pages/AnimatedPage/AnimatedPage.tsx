@@ -5,43 +5,46 @@ import { useLocation } from "react-router";
 import animated from "../../data/animated.json";
 import type { CharacterProps } from "../HomePage/HomePage";
 
+type ImageProps = {
+  image: string;
+};
+
 function AnimatedPage() {
   const location = useLocation();
   const winners = location.state?.winners || [];
 
   const [randomWinner, setRandomWinner] = useState<CharacterProps | null>(null);
-  const [animation, setAnimation] = useState<string | null>(null);
+  const [image, setImage] = useState<string | null>(null);
   const [showWinner, setShowWinner] = useState(false);
 
   useEffect(() => {
-    // Animation aléatoire
-    const randomAnimationIndex = Math.floor(
-      Math.random() * animated.winners.length,
-    );
-    const randomAnimation = animated.winners[randomAnimationIndex];
-    setAnimation(randomAnimation.image); // le gif
+    const images = animated.winners as ImageProps[];
 
-    // Après 8 secondes → tirage gagnant
+    const randomImageIndex = Math.floor(Math.random() * images.length);
+    const randomImage = images[randomImageIndex];
+    setImage(randomImage.image);
+  }, []);
+
+  useEffect(() => {
+    if (!image || winners.length === 0) return;
+
     const timeout = setTimeout(() => {
-      if (winners.length > 0) {
-        const randomIndex = Math.floor(Math.random() * winners.length);
-        setRandomWinner(winners[randomIndex]);
-        setShowWinner(true);
-      }
-    }, 8000);
+      const strongest = winners.reduce(
+        (prev: CharacterProps, current: CharacterProps) => {
+          return (current.maxKi || 0) > (prev.maxKi || 0) ? current : prev;
+        },
+      );
+      setRandomWinner(strongest);
+      setShowWinner(true);
+    }, 5000);
 
-    // Nettoyage après l'animation
     return () => clearTimeout(timeout);
-  }, [winners]);
+  }, [image, winners]);
 
   return (
     <div className="fight-club">
-      {!showWinner && animation && (
-        <img
-          src={animation}
-          alt="Combat en cours..."
-          className="fight-animation"
-        />
+      {!showWinner && image && (
+        <img src={image} alt="Combat en cours..." className="fight-animation" />
       )}
       {showWinner && randomWinner && <WinnerFigth Winner={randomWinner} />}
     </div>

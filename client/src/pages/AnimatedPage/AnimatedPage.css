@@ -1,11 +1,38 @@
 .fight-club {
   display: flex;
   align-items: center;
-  height: 70vh;
+  height: 100%;
+}
+
+.fight-animation {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 992px) {
   .fight-club {
     justify-content: center;
+    height: 100%;
+  }
+
+  .fight-animation {
+    width: 100vh;
+    height: 70vh;
+    max-width: 850px;
+    display: block;
+    margin: 1rem 0 1rem;
   }
 }
