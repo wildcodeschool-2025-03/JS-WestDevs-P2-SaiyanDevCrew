@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CharacterCard from "../../components/CharacterCard/CharacterCard";
 import "./HomePage.css";
 import { useNavigate } from "react-router";
 import Fighter from "../../components/Figther/Figther";
+import translationFR from "../../locales/FR/fr.json";
 
 export interface CharacterProps {
   id: number;
@@ -16,26 +17,16 @@ export interface CharacterProps {
 }
 
 function HomePage() {
-  const [characterData, setCharacterData] = useState<CharacterProps[]>([]);
+  const [characterData] = useState<CharacterProps[]>(translationFR.items);
   const [activeId, setActiveId] = useState<number | null>(null);
   const [selectCharacter, setSelectCharacter] = useState<CharacterProps[]>([]);
   const navigate = useNavigate();
-  console.warn(selectCharacter);
-  useEffect(() => {
-    fetch("https://dragonball-api.com/api/characters?limit=100")
-      .then((response) => response.json())
-      .then((data) => setCharacterData(data.items));
-  }, []);
 
   const handleSelectCharacter = (character: CharacterProps) => {
     setSelectCharacter((prev) => {
       if (prev.find((c) => c.id === character.id)) return prev;
       return [...prev, character];
     });
-
-    /*const handleRemoveCharacter = (id: number) => {
-      setSelectCharacter((prev) => prev.filter((char) => char.id !== id));
-    };*/
   };
   return (
     <main className="home-page">
