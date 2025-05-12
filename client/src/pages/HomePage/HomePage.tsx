@@ -21,7 +21,6 @@ function HomePage() {
   const [activeId, setActiveId] = useState<number | null>(null);
   const [selectCharacter, setSelectCharacter] = useState<CharacterProps[]>([]);
   const navigate = useNavigate();
-  console.warn(selectCharacter);
 
   const handleSelectCharacter = (character: CharacterProps) => {
     setSelectCharacter((prev) => {
