@@ -1,9 +1,9 @@
 import { useState } from "react";
 import CharacterCard from "../../components/CharacterCard/CharacterCard";
 import "./HomePage.css";
-import translationFR from "../../locales/FR/fr.json";
 import { useNavigate } from "react-router";
 import Fighter from "../../components/Figther/Figther";
+import translationFR from "../../locales/FR/fr.json";
 
 export interface CharacterProps {
   id: number;
