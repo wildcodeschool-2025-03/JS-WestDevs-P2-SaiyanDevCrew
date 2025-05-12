@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CharacterCard from "../../components/CharacterCard/CharacterCard";
 import "./HomePage.css";
+import translationFR from "../../locales/FR/fr.json";
 
 interface CharacterProps {
   id: number;
@@ -15,15 +16,11 @@ interface CharacterProps {
 }
 
 function HomePage() {
-  const [characterData, setCharacterData] = useState<CharacterProps[]>([]);
+  const [characterData] = useState<CharacterProps[]>(translationFR.items);
   const [activeId, setActiveId] = useState<number | null>(null);
   const [selectCharacter, setSelectCharacter] = useState<string>("");
   console.warn(selectCharacter);
-  useEffect(() => {
-    fetch("https://dragonball-api.com/api/characters?limit=100")
-      .then((response) => response.json())
-      .then((data) => setCharacterData(data.items));
-  }, []);
+  
   return (
     <main className="home-page">
       {characterData.map((el) => (
