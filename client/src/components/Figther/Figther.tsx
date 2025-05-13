@@ -2,13 +2,14 @@ import "./Figther.css";
 interface BatllepageProps {
   image: string;
   name?: string;
+  onClick: () => void;
 }
 
-function Fighter({ image, name }: BatllepageProps) {
+function Fighter({ image, name, onClick }: BatllepageProps) {
   return (
-    <figure className="fighter-card">
+    <button type="button" className="fighter-card" onClick={onClick}>
       <img src={image} alt={name} />
-    </figure>
+    </button>
   );
 }
 export default Fighter;

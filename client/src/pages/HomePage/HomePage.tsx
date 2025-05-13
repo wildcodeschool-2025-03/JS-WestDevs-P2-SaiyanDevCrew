@@ -28,11 +28,21 @@ function HomePage() {
       return [...prev, character];
     });
   };
+  const handleRemoveCharacter = (id: number) => {
+    setSelectCharacter((prev) => prev.filter((char) => char.id !== id));
+  };
+
   return (
     <main className="home-page">
       <article className="Deck">
-        <Fighter image={selectCharacter[0]?.image} />
-        <Fighter image={selectCharacter[1]?.image} />
+        <Fighter
+          image={selectCharacter[0]?.image}
+          onClick={() => handleRemoveCharacter(selectCharacter[0]?.id)}
+        />
+        <Fighter
+          image={selectCharacter[1]?.image}
+          onClick={() => handleRemoveCharacter(selectCharacter[1]?.id)}
+        />
         <div className="versus">
           <h3>V.S.</h3>
         </div>
@@ -49,8 +59,14 @@ function HomePage() {
             Arene
           </button>
         </div>
-        <Fighter image={selectCharacter[2]?.image} />
-        <Fighter image={selectCharacter[3]?.image} />
+        <Fighter
+          image={selectCharacter[2]?.image}
+          onClick={() => handleRemoveCharacter(selectCharacter[2]?.id)}
+        />
+        <Fighter
+          image={selectCharacter[3]?.image}
+          onClick={() => handleRemoveCharacter(selectCharacter[3]?.id)}
+        />
       </article>
       {characterData.map((el) => (
         <CharacterCard
