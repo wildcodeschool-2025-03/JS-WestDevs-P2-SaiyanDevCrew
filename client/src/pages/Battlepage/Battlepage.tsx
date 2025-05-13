@@ -33,7 +33,6 @@ function Battlepage() {
           className="fight"
           type="button"
           onClick={() => {
-            console.log(characters);
             navigate("/animation", { state: { winners: characters } });
           }}
         >

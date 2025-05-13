@@ -3,11 +3,7 @@ import "./AnimatedPage.css";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import animated from "../../data/animated.json";
-import type { CharacterProps } from "../HomePage/HomePage";
-
-type ImageProps = {
-  image: string;
-};
+import type { CharacterProps } from "../../types/CharacterProps";
 
 function AnimatedPage() {
   const location = useLocation();
@@ -18,7 +14,7 @@ function AnimatedPage() {
   const [showWinners, setShowWinners] = useState(false);
 
   useEffect(() => {
-    const images = animated.winners as ImageProps[];
+    const images = animated.winners as CharacterProps[];
     const randomImage = images[Math.floor(Math.random() * images.length)];
     setImage(randomImage.image);
   }, []);
