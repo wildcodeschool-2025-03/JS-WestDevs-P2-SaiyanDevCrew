@@ -19,17 +19,30 @@ export interface CharacterProps {
 function HomePage() {
   const [characterData] = useState<CharacterProps[]>(translationFR.items);
   const [activeId, setActiveId] = useState<number | null>(null);
-  const [selectCharacter, setSelectCharacter] = useState<CharacterProps[]>([]);
+  const [selectCharacter, setSelectCharacter] = useState<
+    (CharacterProps | null)[]
+  >([null, null, null, null]);
   const navigate = useNavigate();
 
   const handleSelectCharacter = (character: CharacterProps) => {
     setSelectCharacter((prev) => {
-      if (prev.find((c) => c.id === character.id)) return prev;
-      return [...prev, character];
+      if (prev.some((c) => c !== null && c.id === character.id)) return prev;
+
+      const emptyIndex = prev.findIndex((c) => c === null);
+      if (emptyIndex === -1) return prev;
+
+      const newSelection = [...prev];
+      newSelection[emptyIndex] = character;
+      return newSelection;
     });
   };
-  const handleRemoveCharacter = (id: number) => {
-    setSelectCharacter((prev) => prev.filter((char) => char.id !== id));
+
+  const handleRemoveCharacter = (id: number | undefined) => {
+    if (id === undefined) return;
+
+    setSelectCharacter((prev) =>
+      prev.map((char) => (char !== null && char.id === id ? null : char)),
+    );
   };
 
   return (
@@ -50,9 +63,10 @@ function HomePage() {
           <button
             className="arene"
             type="button"
+            disabled={selectCharacter.some((c) => c === null)}
             onClick={() => {
               navigate(
-                `/battle-page/${selectCharacter[0].id}/${selectCharacter[1].id}/${selectCharacter[2].id}/${selectCharacter[3].id}`,
+                `/battle-page/${selectCharacter[0]?.id}/${selectCharacter[1]?.id}/${selectCharacter[2]?.id}/${selectCharacter[3]?.id}`,
               );
             }}
           >
@@ -68,6 +82,7 @@ function HomePage() {
           onClick={() => handleRemoveCharacter(selectCharacter[3]?.id)}
         />
       </article>
+
       {characterData.map((el) => (
         <CharacterCard
           key={el.id}

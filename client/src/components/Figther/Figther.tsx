@@ -1,6 +1,6 @@
 import "./Figther.css";
 interface BatllepageProps {
-  image: string;
+  image?: string;
   name?: string;
   onClick: () => void;
 }
