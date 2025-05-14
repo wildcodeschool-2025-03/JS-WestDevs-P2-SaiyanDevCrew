@@ -1,9 +1,5 @@
 import "./Figther.css";
-interface BattlepageProps {
-  image?: string;
-  name?: string;
-  onClick?: () => void;
-}
+import type { BattlepageProps } from "../../types/BattlepageProps";
 
 function Fighter({ image, name, onClick }: BattlepageProps) {
   return (
