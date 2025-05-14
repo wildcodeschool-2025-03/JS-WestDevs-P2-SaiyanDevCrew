@@ -5,15 +5,19 @@ function Header() {
   return (
     <header className="banner-header">
       <figure>
-        <img src="images/Logo.webp" alt="logo du site" />
+        <img src="/public/images/Logo.webp" alt="logo du site" />
       </figure>
       <figcaption>
-        <h1>
-          <span>Dragon</span> Fight Simulator
+        <h1 className="title">
+          <div className="box-title">
+            <span>Dragon </span>Fight{" "}
+          </div>
+          <div className="simulator">Simulator</div>
         </h1>
       </figcaption>
       <nav>
-        <Link to="/home">Home</Link>
+        <Link to="/">Home</Link>
+        <Link to="/login">Login</Link>
       </nav>
     </header>
   );

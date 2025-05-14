@@ -1,46 +1,47 @@
-import { useEffect, useState } from "react";
 import "./Battlepage.css";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import { useNavigate } from "react-router";
 import Fighter from "../../components/Figther/Figther";
-
-interface BattlepageData {
-  id: number;
-  name: string;
-  image: string;
-}
+import type { CharacterProps } from "../HomePage/HomePage";
 
 function Battlepage() {
-  const [BattlepageData, setBattlepageData] = useState<BattlepageData[]>([]);
-
+  const params = useParams();
+  const navigate = useNavigate();
+  const [characters, setCharacters] = useState<[] | CharacterProps[]>([]);
   useEffect(() => {
-    fetch("https://dragonball-api.com/api/characters")
+    fetch("https://dragonball-api.com/api/characters?limit=100")
       .then((response) => response.json())
       .then((data) => {
-        setBattlepageData(data.items);
+        const characterApi = data.items;
+        const battleCharactersId = Object.values(params);
+        const battleCharacters = characterApi.filter((char: CharacterProps) =>
+          battleCharactersId.includes(String(char.id)),
+        );
+        setCharacters(battleCharacters);
       });
-  }, []);
+  }, [params]);
 
   return (
     <>
       <main className="app">
-        {BattlepageData.slice(0, 2).map((element) => {
-          return (
-            <Fighter
-              key={element.id}
-              name={element.name}
-              image={element.image}
-            />
-          );
-        })}
-        <button type="button">fight</button>
-        {BattlepageData.slice(3, 5).map((element) => {
-          return (
-            <Fighter
-              key={element.id}
-              name={element.name}
-              image={element.image}
-            />
-          );
-        })}
+        <div className="deck1">
+          <Fighter image={characters[0]?.image} />
+          <Fighter image={characters[1]?.image} />
+        </div>
+        <button
+          className="fight"
+          type="button"
+          onClick={() => {
+            navigate("/animation", { state: { winners: characters } });
+          }}
+        >
+          fight
+        </button>
+        <div className="deck2">
+          <Fighter image={characters[2]?.image} />
+          <Fighter image={characters[3]?.image} />
+        </div>
       </main>
     </>
   );

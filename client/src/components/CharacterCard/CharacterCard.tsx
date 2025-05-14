@@ -1,3 +1,4 @@
+import type { CharacterProps } from "../../pages/HomePage/HomePage";
 import "../CharacterCard/CharacterCard.css";
 
 interface CardProps {
@@ -6,12 +7,12 @@ interface CardProps {
   name: string;
   race: string;
   gender: string;
-  description: string;
   ki: string;
   maxKi: string;
   affiliation: string;
   activeId: number | null;
   setActiveId: (id: number | null) => void;
+  handleSelectCharacter: (character: CharacterProps) => void;
 }
 
 function CharacterCard({
@@ -25,11 +26,14 @@ function CharacterCard({
   affiliation,
   activeId,
   setActiveId,
+  handleSelectCharacter,
 }: CardProps) {
+  const character = { image, id, name, gender, ki, maxKi, affiliation, race };
   const isActive = activeId === id;
   const toggleCard = () => {
     setActiveId(isActive ? null : id);
   };
+
   return (
     <div className="character">
       <button
@@ -53,7 +57,13 @@ function CharacterCard({
               Affiliation <br />
               {affiliation}
             </p>
-            <button type="button" className="select-button">
+            <button
+              type="button"
+              className="select-button"
+              onClick={() => {
+                handleSelectCharacter(character);
+              }}
+            >
               Select
             </button>
           </article>

@@ -14,13 +14,19 @@
   margin: 0;
   font-size: 4rem;
   color: var(--primary-color);
-  -webkit-text-stroke: 0.1px black;
+  -webkit-text-stroke: 8px black;
   text-align: center;
-  letter-spacing: 0.3rem;
+  letter-spacing: 2px;
 }
 
 .banner-header figcaption h1 span {
   color: var(--tertiary-color);
+}
+
+.banner-header nav {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 3rem;
 }
 
 .banner-header nav a {
@@ -29,7 +35,7 @@
   justify-content: center;
   text-decoration: none;
   color: var(--primary-color);
-  -webkit-text-stroke: 1.2px black;
+  -webkit-text-stroke: 5px black;
   background-color: var(--secondary-color);
   border-radius: 10px;
   padding: 6px;
@@ -43,15 +49,28 @@
 
 @media (min-width: 768px) {
   .banner-header {
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
   }
 
-  .banner-header figcaption h1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
+  .banner-header .figure {
+    grid-column: 1 / 2;
+  }
+
+  .banner-header .title {
+    grid-column: 2 / 3;
+    justify-items: left;
+
+    .simulator {
+      display: flex;
+      width: 300px;
+      justify-content: center;
+    }
+  }
+
+  .banner-header nav {
+    grid-column: 3 / 3;
+    justify-content: end;
   }
 
   .banner-header nav :link {
