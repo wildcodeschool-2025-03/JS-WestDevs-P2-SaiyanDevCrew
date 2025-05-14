@@ -20,25 +20,23 @@
   img {
     display: none;
   }
+  label {
+    display: block;
+    margin-bottom: 4px;
+  }
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
 }
 
-label {
-  display: block;
-  margin-bottom: 4px;
-}
-
-input,
-textarea {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-button {
+.login {
   margin-top: 20px;
   padding: 12px;
   background-color: rgba(251, 178, 36, 1);

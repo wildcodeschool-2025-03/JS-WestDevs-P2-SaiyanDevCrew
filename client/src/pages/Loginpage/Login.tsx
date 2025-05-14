@@ -2,10 +2,10 @@ import { type FormEvent, useState } from "react";
 import "./Login.css";
 
 function Loginpage() {
-  const [name, setname] = useState("");
-  const [pseudo, setpseudo] = useState("");
-  const [email, setemail] = useState("");
-  const [message, setmessage] = useState("");
+  const [name, setName] = useState("");
+  const [pseudo, setPseudo] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handlesubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,21 +25,21 @@ function Loginpage() {
             type="text"
             id="name"
             value={name}
-            onChange={(e) => setname(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
           />
           <label htmlFor="pseudo">Pseudo</label>
           <input
             type="pseudo"
             id="pseudo"
             value={pseudo}
-            onChange={(e) => setpseudo(e.target.value)}
+            onChange={(e) => setPseudo(e.target.value)}
           />
           <label htmlFor="email">Email</label>
           <input
             type="email"
             id="email"
             value={email}
-            onChange={(e) => setemail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <label htmlFor="message">Message</label>
           <textarea
@@ -48,10 +48,12 @@ function Loginpage() {
             cols={25}
             rows={2}
             value={message}
-            onChange={(e) => setmessage(e.target.value)}
+            onChange={(e) => setMessage(e.target.value)}
           />
-          <button type="submit">Submit</button>
-          <div className="lien-button">
+          <button className="login" type="submit">
+            Submit
+          </button>
+          <div className="link-button">
             <button className="google" type="button">
               Google
             </button>
