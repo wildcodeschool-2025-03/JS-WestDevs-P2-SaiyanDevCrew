@@ -1,0 +1,78 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  margin: 3rem auto;
+  width: 90%;
+}
+
+.form-container section {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-color: rgba(217, 217, 217, 1);
+  min-height: 80vh;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.3);
+
+  img {
+    display: none;
+  }
+  label {
+    display: block;
+    margin-bottom: 4px;
+  }
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+.login-page {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: rgba(251, 178, 36, 1);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+}
+.link-button {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.google,
+.apple {
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 12px;
+  border-style: none;
+}
+
+@media screen and (min-width: 920px) {
+  .form-container section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding: 0;
+
+    img {
+      width: 500px;
+      border-radius: 8px;
+      display: block;
+      height: 500px;
+      object-fit: contain;
+    }
+  }
+}

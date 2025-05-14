@@ -12,6 +12,7 @@ import AnimatedPage from "./pages/AnimatedPage/AnimatedPage";
 import Battlepage from "./pages/Battlepage/Battlepage";
 import CrewPage from "./pages/CrewPage/CrewPage";
 import HomePage from "./pages/HomePage/HomePage";
+import Loginpage from "./pages/Loginpage/Login";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -44,9 +45,12 @@ const router = createBrowserRouter([
         path: "/battle-page/:char1/:char2/:char3/:char4",
         element: <Battlepage />,
       },
+      {
+        path: "/login-page",
+        element: <Loginpage />,
+      },
     ], // Renders the App component for the home page
   },
-
   // Try adding a new route! For example, "/about" with an About component
 ]);
 

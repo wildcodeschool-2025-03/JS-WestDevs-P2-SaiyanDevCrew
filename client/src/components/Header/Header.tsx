@@ -17,7 +17,7 @@ function Header() {
       </figcaption>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/login">Login</Link>
+        <Link to="/login-page">Login</Link>
       </nav>
     </header>
   );
