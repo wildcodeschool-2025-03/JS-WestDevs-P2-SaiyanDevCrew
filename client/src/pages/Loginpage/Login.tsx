@@ -7,7 +7,7 @@ function Loginpage() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handlesubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     alert(
@@ -16,10 +16,10 @@ function Loginpage() {
   };
 
   return (
-    <main className="formule">
-      <section className="form">
-        <img src="/public/images/pngegg_2.png" alt="dragonball" />
-        <form onSubmit={handlesubmit}>
+    <main className="form-container">
+      <section>
+        <img src="/images/pngegg_2.png" alt="dragonball" />
+        <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -50,7 +50,7 @@ function Loginpage() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <button className="login" type="submit">
+          <button className="login-page" type="submit">
             Submit
           </button>
           <div className="link-button">
