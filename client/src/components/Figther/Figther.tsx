@@ -2,7 +2,7 @@ import "./Figther.css";
 interface BatllepageProps {
   image?: string;
   name?: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 function Fighter({ image, name, onClick }: BatllepageProps) {
