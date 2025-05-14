@@ -19,7 +19,6 @@ function Loginpage() {
     <main className="formule">
       <section className="form">
         <img src="/public/images/pngegg_2.png" alt="dragonball" />
-
         <form onSubmit={handlesubmit}>
           <label htmlFor="name">Name</label>
           <input
