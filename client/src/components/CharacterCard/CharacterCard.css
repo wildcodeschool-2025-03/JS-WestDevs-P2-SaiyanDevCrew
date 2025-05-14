@@ -1,57 +1,46 @@
 .character-card {
-  display: flex;
-  background-color: rgb(193, 192, 192);
-  align-items: center;
-  justify-content: center;
-  height: 319px;
-  width: 265px;
-  border-radius: 20px;
+  background-color: var(--secondary-color);
   box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 170px 170px;
+  grid-template-rows: 300px;
+  place-items: center;
+  height: 300px;
+  width: 170px;
+  transition: width 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 20px;
+  border-style: none;
   margin-bottom: 5rem;
   margin-top: 15px;
-  border: none;
-  cursor: pointer;
+  padding: 0;
+  z-index: 0;
 
   img {
-    top: -10px;
     height: 350px;
-    width: auto;
-    z-index: 1;
-    transition: filter 0.3s ease, transform 0.4s ease, box-shadow 0.3s ease;
-    transform: translateX(-5px);
+    max-width: 250px;
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
   }
 
   &:hover:not(.active) img {
-    transform: translateY(-5px) scale(1.02);
+    transform: scale(1.1);
   }
-}
-
-.character {
-  display: flex;
-  text-align: center;
 }
 
 .character-data {
-  right: 0;
-  background-color: black;
-  color: white;
-  height: 319px;
-  width: 70%;
-  padding: 0 1rem 0 1rem;
-  border-radius: 0px 20px 20px 0px;
-  box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  animation: slideIn 0.4s ease-out;
-  z-index: 0;
-
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--overlay-color);
   h2 {
-    font-family: var(--font-component);
-    font-size: 2rem;
-    -webkit-text-stroke: 0.5px white;
-    color: #fbb224;
+    font-size: 1.8rem;
+    -webkit-text-stroke: 5px black;
   }
   p {
     font-family: var(--font-text);
+    color: white;
   }
   .select-button {
     background-color: rgb(193, 192, 192);
@@ -63,7 +52,7 @@
     text-transform: uppercase;
     font-size: 18px;
     -webkit-text-stroke: 1.5px black;
-    color: #fbb224;
+    color: var(--primary-color);
     cursor: pointer;
     transition: transform 0.2s ease;
 
@@ -73,13 +62,33 @@
   }
 }
 
-@keyframes slideIn {
-  from {
-    right: -100%;
-    opacity: 0.5;
+.character-card.active {
+  width: 340px;
+  overflow: hidden;
+
+  img {
+    max-height: 290px;
   }
-  to {
-    right: 0;
-    opacity: 1;
+}
+
+@media (min-width: 992px) {
+  .character-card {
+    height: 350px;
+    width: 250px;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 350px;
+
+    img {
+      height: 400px;
+      width: 280px;
+      place-items: center;
+    }
+  }
+  .character-card.active {
+    width: 420px;
+
+    img {
+      max-height: 340px;
+    }
   }
 }

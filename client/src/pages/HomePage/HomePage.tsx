@@ -34,7 +34,7 @@ function HomePage() {
         <Fighter image={selectCharacter[0]?.image} />
         <Fighter image={selectCharacter[1]?.image} />
         <div className="versus">
-          <h3>V.S.</h3>
+          <p>V.S.</p>
         </div>
         <div className="three">
           <button
