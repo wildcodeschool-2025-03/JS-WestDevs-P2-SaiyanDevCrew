@@ -1,44 +1,41 @@
 .app {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .deck1,
 .deck2 {
   display: flex;
-  margin: 20px 0;
+  margin: 40px auto;
+  width: 95%;
+  justify-content: space-evenly;
 }
 
 .fight {
-  background-color: rgb(193, 192, 192);
-  text-decoration: none;
+  background-color: var(--secondary-color);
   border: 0.5px solid black;
   padding: 0.5rem 1rem 0.2rem 1rem;
   border-radius: 10px;
   font-family: var(--font-component);
   text-transform: uppercase;
   font-size: 18px;
-  -webkit-text-stroke: 1.5px black;
+  -webkit-text-stroke: 5px black;
+  paint-order: stroke;
   color: #fbb224;
   cursor: pointer;
   transition: transform 0.2s ease;
   font-size: 24px;
 }
 
-@media (min-width: 768px) {
-  .app {
-    display: block;
-    text-align: center;
-  }
-
+@media (min-width: 992px) {
   .deck1 {
-    padding-top: 10vh;
+    justify-content: flex-start;
   }
-
+  .fight {
+    width: 110px;
+    height: 40px;
+    font-size: 2rem;
+  }
   .deck2 {
     justify-content: flex-end;
-    padding-bottom: 15vh;
   }
 }
