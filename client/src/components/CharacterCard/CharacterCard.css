@@ -7,8 +7,7 @@
   place-items: center;
   height: 300px;
   width: 170px;
-  transition: width 0.3s ease-in-out;
-  cursor: pointer;
+  transition: width 0.3s ease-in-out, filter 0.3s ease, transform 0.3s ease;  cursor: pointer;
   border-radius: 20px;
   margin-bottom: 5rem;
   margin-top: 15px;
@@ -95,6 +94,11 @@
     max-height: 290px;
     max-width: 170px;
   }
+}
+.character-card.blurred {
+  filter: blur(4px);
+  pointer-events: none;
+  transform: scale(0.95);
 }
 
 @media (min-width: 992px) {

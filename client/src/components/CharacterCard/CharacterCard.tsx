@@ -37,8 +37,7 @@ function CharacterCard({
   return (
     <button
       type="button"
-      className={`character-card ${isActive ? "active" : ""}`}
-      onClick={toggleCard}
+      className={`character-card ${isActive ? "active" : activeId !== null ? "blurred" : ""}`}      onClick={toggleCard}
     >
       <img src={image} alt={name} />
       {isActive && (
