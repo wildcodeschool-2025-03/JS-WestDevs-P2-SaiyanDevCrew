@@ -66,7 +66,10 @@ function HomePage() {
             disabled={selectCharacter.some((c) => c === null)}
             onClick={() => {
               navigate(
-                `/battle-page/${selectCharacter[0]?.id}/${selectCharacter[1]?.id}/${selectCharacter[2]?.id}/${selectCharacter[3]?.id}`,
+                `/battle-page/${selectCharacter
+                  .filter((char) => char !== null)
+                  .map((char) => char.id)
+                  .join("/")}`,
               );
             }}
           >

@@ -5,10 +5,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: rgb(193, 192, 192);
+  background-color: var(--secondary-color);
   border-radius: 10px;
   box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.3);
-  border-style: none;
   img {
     height: 150px;
   }
