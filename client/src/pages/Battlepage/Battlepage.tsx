@@ -15,9 +15,11 @@ function Battlepage() {
       .then((data) => {
         const characterApi = data.items;
         const battleCharactersId = Object.values(params);
-        const battleCharacters = characterApi.filter((char: CharacterProps) =>
-          battleCharactersId.includes(String(char.id)),
-        );
+        const battleCharacters = battleCharactersId
+          .map((id) =>
+            characterApi.find((char: CharacterProps) => String(char.id) === id),
+          )
+          .filter((char): char is CharacterProps => char !== undefined);
         setCharacters(battleCharacters);
       });
   }, [params]);

@@ -28,12 +28,21 @@ function HomePage() {
     setSelectCharacter((prev) => {
       if (prev.some((c) => c !== null && c.id === character.id)) return prev;
 
-      const emptyIndex = prev.findIndex((c) => c === null);
-      if (emptyIndex === -1) return prev;
+      const team1Index = [0, 1].find((i) => prev[i] === null);
+      if (team1Index !== undefined) {
+        const newSelection = [...prev];
+        newSelection[team1Index] = character;
+        return newSelection;
+      }
 
-      const newSelection = [...prev];
-      newSelection[emptyIndex] = character;
-      return newSelection;
+      const team2Index = [2, 3].find((i) => prev[i] === null);
+      if (team2Index !== undefined) {
+        const newSelection = [...prev];
+        newSelection[team2Index] = character;
+        return newSelection;
+      }
+
+      return prev;
     });
   };
 
@@ -66,7 +75,10 @@ function HomePage() {
             disabled={selectCharacter.some((c) => c === null)}
             onClick={() => {
               navigate(
-                `/battle-page/${selectCharacter[0]?.id}/${selectCharacter[1]?.id}/${selectCharacter[2]?.id}/${selectCharacter[3]?.id}`,
+                `/battle-page/${selectCharacter
+                  .filter((char) => char !== null)
+                  .map((char) => char.id)
+                  .join("/")}`,
               );
             }}
           >
