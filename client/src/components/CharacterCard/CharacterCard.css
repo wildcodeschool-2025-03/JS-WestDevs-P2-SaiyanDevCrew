@@ -7,7 +7,8 @@
   place-items: center;
   height: 300px;
   width: 170px;
-  transition: width 0.3s ease-in-out, filter 0.3s ease, transform 0.3s ease;  cursor: pointer;
+  transition: width 0.3s ease-in-out, filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
   border-radius: 20px;
   margin-bottom: 5rem;
   margin-top: 15px;
