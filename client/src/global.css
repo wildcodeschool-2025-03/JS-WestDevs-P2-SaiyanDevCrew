@@ -45,3 +45,7 @@ a {
   font-weight: 100;
   paint-order: stroke;
 }
+
+button {
+  border-style: none;
+}

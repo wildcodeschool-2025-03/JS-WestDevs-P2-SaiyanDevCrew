@@ -4,17 +4,25 @@
   width: 90px;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  background-color: rgb(193, 192, 192);
+  background-color: var(--secondary-color);
   border-radius: 10px;
   box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.3);
   img {
-    height: 150px;
+    max-height: 150px;
   }
 }
 
-@media (min-width: 768px) {
-  .fighter-card {
-    margin: 16px 20px;
+@media (min-width: 992px) {
+  .app {
+    .fighter-card {
+      margin: 16px 20px;
+      height: 300px;
+      width: 200px;
+
+      img {
+        max-height: 350px;
+        max-width: 250px;
+      }
+    }
   }
 }

@@ -66,7 +66,7 @@ function HomePage() {
           onClick={() => handleRemoveCharacter(selectCharacter[1]?.id)}
         />
         <div className="versus">
-          <h3>V.S.</h3>
+          <p>V.S.</p>
         </div>
         <div className="three">
           <button

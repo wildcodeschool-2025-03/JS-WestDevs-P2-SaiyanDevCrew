@@ -26,7 +26,7 @@
 .banner-header nav {
   display: flex;
   gap: 16px;
-  padding-bottom: 3rem;
+  padding: 2rem 0;
 }
 
 .banner-header nav a {
@@ -47,7 +47,7 @@
 
 /** Responsive **/
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .banner-header {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
