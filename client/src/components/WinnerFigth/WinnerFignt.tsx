@@ -6,7 +6,7 @@ interface WinProps {
   id: number;
 }
 
-function WinnerFigth({ Winner }: { Winner: WinProps }) {
+function WinnerFight({ Winner }: { Winner: WinProps }) {
   return (
     <figure className="animated">
       <img src={Winner.image} alt={Winner.name} />
@@ -14,4 +14,4 @@ function WinnerFigth({ Winner }: { Winner: WinProps }) {
   );
 }
 
-export default WinnerFigth;
+export default WinnerFight;
