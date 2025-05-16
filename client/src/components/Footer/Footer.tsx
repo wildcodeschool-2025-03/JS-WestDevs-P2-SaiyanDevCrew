@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="banner-footer">
       <Link to="/crew-page">Le Crew</Link>
-      <p>&copy; copyright 2025 - Sayian Crew</p>
+      <p>&copy; copyright 2025 - Saiyan Dev Crew</p>
       <figure>
         <a href="https://github.com/" target="blank">
           <img src="/images/github-mark.svg" alt="logo GitHub" />

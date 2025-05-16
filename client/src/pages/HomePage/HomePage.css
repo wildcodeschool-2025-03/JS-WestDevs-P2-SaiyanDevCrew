@@ -10,6 +10,7 @@
     align-items: center;
     column-gap: 50px;
     margin-bottom: 5rem;
+    grid-column: 1 / 5;
   }
 
   .three {
@@ -46,12 +47,11 @@
 
 @media (min-width: 992px) {
   .home-page {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
+    place-items: center;
+    padding: 20px;
 
     .Deck {
       display: grid;

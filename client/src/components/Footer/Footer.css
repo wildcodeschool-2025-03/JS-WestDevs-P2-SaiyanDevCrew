@@ -9,7 +9,7 @@
 .banner-footer p {
   display: flex;
   flex-wrap: wrap;
-  max-width: 33%;
+  max-width: 35%;
 }
 
 .banner-footer figure {
