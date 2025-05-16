@@ -1,4 +1,4 @@
-import WinnerFigth from "../../components/WinnerFigth/WinnerFignt";
+import WinnerFight from "../../components/WinnerFigth/WinnerFignt";
 import "./AnimatedPage.css";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
@@ -79,7 +79,7 @@ function AnimatedPage() {
         <div className="winners-container">
           <h2>Winners !</h2>
           {randomWinners.map((winner) => (
-            <WinnerFigth key={winner.id} Winner={winner} />
+            <WinnerFight key={winner.id} Winner={winner} />
           ))}
         </div>
       )}
